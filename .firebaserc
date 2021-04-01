@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "coffeerun-21dc9",
+    "staging": "coffeerun-a7452"
+  }
+}
