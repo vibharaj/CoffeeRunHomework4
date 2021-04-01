@@ -18,13 +18,12 @@
     var checkList = new CheckList(CHECKLIST_SELECTOR);
     checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
     var formHandler = new FormHandler(FORM_SELECTOR);
-    var remoteDS = new App.RemoteDataStore
-    ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
-    
+    var remoteDS = new App.RemoteDataStore();
+    // ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
 
-    remoteDS.add('a@b.com', {emailAddress: 'a@b.com', coffee: 'espresso'});
 
     formHandler.addSubmitHandler(function (data) {
+        alert("addsubmithandler");
         console.log(formHandler);
         myTruck.createOrder.call(myTruck, data);
         checkList.addRow.call(checkList, data);

@@ -2,12 +2,12 @@
     'use strict';
     var App = window.App || {};
 
-    function RemoteDataStore(url) {
+    function RemoteDataStore() {
 
-        if (!url) {
-            throw new Error('No remote URL supplied.');
-            }
-            this.serverUrl = url;
+        // if (!url) {
+        //     throw new Error('No remote URL supplied.');
+        //     }
+        //     this.serverUrl = url;
     }
 
 

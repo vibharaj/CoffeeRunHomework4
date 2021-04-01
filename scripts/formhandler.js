@@ -13,6 +13,7 @@
         }
 
         FormHandler.prototype.addSubmitHandler = function (fn) {
+            alert("test");
             console.log('Setting submit handler for form');
             this.$formElement.on('submit', function(event) {
                 event.preventDefault();
