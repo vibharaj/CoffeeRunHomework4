@@ -36,10 +36,10 @@
                 
                 remoteDS.add(data);
                 console.log("calling getall");
-                var allCoffeeOrders = remoteDS.getAll();
+                var allCoffeeOrders = remoteDS.getAllOrders();
 
                 console.log("calling get");
-                var myOrder = remoteDS.get(emailAddress);
+                var myOrder = remoteDS.getOrder(emailAddress);
                 
                 this.reset();
                 this.elements[0].focus();
