@@ -21,7 +21,7 @@
             .collection('orders')
             .limit(50);
       
-        this.getDocumentsInQuery(query, renderer);
+        console.log(query);
     };
 
     RemoteDataStore.prototype.getOrder = function(emailAddress) {
