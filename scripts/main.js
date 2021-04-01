@@ -22,7 +22,7 @@
     // ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
 
     formHandler.addSubmitHandler(function (data) {
-        alert("addsubmithandler");
+        // alert("addsubmithandler");
         console.log(formHandler);
         myTruck.createOrder.call(myTruck, data);
         checkList.addRow.call(checkList, data);
