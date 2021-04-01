@@ -11,9 +11,9 @@
     }
 
 
-    RemoteDataStore.prototype.add = function(key, data) {
+    RemoteDataStore.prototype.add = function(data) {
         var collection = firebase.firestore().collection('orders');
-        return collection.add(key, data);
+        return collection.add(data);
     };
 
     // RemoteDataStore.prototype.add = function (key, val) {
