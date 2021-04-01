@@ -31,10 +31,10 @@
                 var emailAddress = document.getElementById('emailAddress');
                 
                 fn(data);
-                var remoteDS = new App.RemoteDataStore
-                ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
+                var remoteDS = new App.RemoteDataStore();
+                // ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
                 
-                remoteDS.add(emailAddress, data);
+                remoteDS.add(data);
                 console.log("calling getall");
                 var allCoffeeOrders = remoteDS.getAll();
 
