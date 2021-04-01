@@ -24,8 +24,8 @@
         console.log(query);
     };
 
-    RemoteDataStore.prototype.getOrder = function(emailAddress) {
-        return firebase.firestore().collection('orders').doc(emailAddress).get();
+    RemoteDataStore.prototype.getOrder = function(id) {
+        return firebase.firestore().collection('orders').doc(id).get();
     };
     
 
