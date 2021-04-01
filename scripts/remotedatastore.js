@@ -16,6 +16,31 @@
         return collection.add(data);
     };
 
+    RemoteDataStore.prototype.getAllOrders = function(renderer) {
+        var query = firebase.firestore()
+            .collection('orders')
+            .limit(50);
+      
+        this.getDocumentsInQuery(query, renderer);
+    };
+
+    RemoteDataStore.prototype.getOrder = function(emailAddress) {
+        return firebase.firestore().collection('orders').doc(emailAddress).get();
+    };
+    
+
+    RemoteDataStore.prototype.remove = function (emailAddress) {
+        $.ajax(this.serverUrl + '/' + emailAddress, {
+            type: 'DELETE'
+        });
+    };
+        
+    RemoteDataStore.prototype.removeAll = function () {
+        $.ajax(this.serverUrl, {
+            type: 'DELETE'
+        });
+    };
+
     // RemoteDataStore.prototype.add = function (key, val) {
     //     $.post(this.serverUrl, val, function(serverResponse){
     //         console.log(serverResponse);
